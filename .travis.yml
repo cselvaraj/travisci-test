@@ -1,10 +1,18 @@
 language: python
 python:
   - "3.5"
+env:
+  - PEP=true
+  - PEP=false
+matrix:
+  allow_failures:
+    - env: PEP=true
 install:
   - pip install -r requirements.txt
   - pip install coveralls
+  - pip install pep8
 script:
-  coverage run --source=traviscitest setup.py test
+  - if $PEP ; then pep8 src ; fi
+  - coverage run --source=traviscitest setup.py test
 after_success:
   coveralls
