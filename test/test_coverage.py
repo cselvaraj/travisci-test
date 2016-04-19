@@ -15,3 +15,10 @@ class TestCoverage:
         expected = 3
 
         assert expected == actual
+
+    def test_completecoverage(self):
+
+        actual = operations.minus(3, 2)
+        expected = 1
+
+        assert expected == actual
