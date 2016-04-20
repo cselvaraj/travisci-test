@@ -22,3 +22,10 @@ class TestCoverage:
         expected = 1
 
         assert expected == actual
+
+    def test_divide(self):
+
+        actual = operations.divide(6, 2)
+        expected = 3
+
+        assert expected == actual
