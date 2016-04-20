@@ -4,5 +4,3 @@ def plus(addend0, addend1):
 
 def minus(minuend, subtrahend):
     return minuend - subtrahend
-
-#add pep8 violations
