@@ -1,0 +1,11 @@
+machine:
+  python:
+    version: 3.5.1
+
+dependencies:
+  pre:
+    - pip install -U pytest pytest-cov -r requirements.txt
+
+test:
+  override:
+    - py.test --cov=traviscitest --cov-report=html:$CIRCLE_ARTIFACTS/coverage --junit-xml=$CIRCLE_TEST_REPORTS/junit.xml
